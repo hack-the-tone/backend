@@ -32,7 +32,7 @@ public class EonDynamoDbClient {
                 .putItem(
                         new PutItemSpec().withItem(new Item()
                                 .withString("id", timeEntry.getId())
-                                .withPrimaryKey("userId", timeEntry.getUserId())
+                                .withString("userId", timeEntry.getUserId())
                                 .withString("startTime", timeEntry.getStartTime().toString())
                                 .withString("endTime", timeEntry.getEndTime().toString())
                                 .withString("projectId", timeEntry.getProjectId())
@@ -96,6 +96,8 @@ public class EonDynamoDbClient {
 
         return jsonItems;
     }
+
+
 
 //    public static void main(String[] args) {
 //            AWSCredentials awsCredentials = new AWSCredentials() {
