@@ -33,10 +33,10 @@ public class HttpClientImpl {
         HttpResponse httpResponse = httpclient.execute(httppost);
 
         final StatusLine statusLine = httpResponse.getStatusLine();
-        LOG.debug("-- response code" + statusLine.getStatusCode() + " and " + statusLine.getReasonPhrase());
+        LOG.info("-- response code" + statusLine.getStatusCode() + " and " + statusLine.getReasonPhrase());
 
         String responseJSON = EntityUtils.toString(httpResponse.getEntity(), UTF8_CHARSET);
-        LOG.debug("-- responseJSON" + responseJSON);
+        LOG.info("-- responseJSON" + responseJSON);
         return responseJSON;
     }
 
