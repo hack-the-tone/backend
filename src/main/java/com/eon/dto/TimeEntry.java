@@ -11,5 +11,5 @@ public class TimeEntry {
     private Timestamp endTime;
     private String userId;
     private String projectId;
-    private String hoursType;
+    private String hoursTypeId;
 }

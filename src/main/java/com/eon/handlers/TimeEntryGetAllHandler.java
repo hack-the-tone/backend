@@ -16,6 +16,8 @@ public class TimeEntryGetAllHandler implements RequestHandler<Map<String, Object
     @Override
     public ApiGatewayResponse handleRequest(Map<String, Object> input, Context context) {
         LOG.info("received: " + input);
+
+
         Response responseBody = new Response("Hello, the current time is " + new Date());
         Map<String, String> headers = new HashMap<>();
         headers.put("X-Powered-By", "AWS Lambda & Serverless");

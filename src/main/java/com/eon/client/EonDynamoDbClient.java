@@ -29,7 +29,7 @@ public class EonDynamoDbClient {
                                 .withString("startTime", timeEntry.getStartTime().toString())
                                 .withString("endTime", timeEntry.getEndTime().toString())
                                 .withString("projectId", timeEntry.getProjectId())
-                                .withString("hoursType", timeEntry.getHoursType())));
+                                .withString("hoursType", timeEntry.getHoursTypeId())));
     }
 
     private PutItemOutcome upsertProject(Project project)
